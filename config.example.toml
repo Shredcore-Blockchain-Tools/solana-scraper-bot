@@ -317,13 +317,13 @@ TELEGRAM_PHONE_NUMBER = ""
 # Supported URL formats:
 #   - Public channel/group: https://t.me/gramme_rs
 #   - Private invite link: https://t.me/+UGEkFgsh8785ZmVk (must have access)
-#   - Topic link: https://t.me/Freedomia_io/1 (monitors entire chat)
+#   - Topic link: https://t.me/reaper/1 (monitors entire chat)
 # If ENABLE_TELEGRAM is true but this is empty, Telegram scraping will be automatically disabled.
 TELEGRAM_SOURCES = [
   # { url = "https://t.me/gramme_rs" },
   # { url = "https://t.me/TheReaperGems", author_whitelist = ["reaper_aped", "degenwaLdo"] },
   # { url = "https://t.me/+UGEkFgsh8785ZmVk" },
-  # { url = "https://t.me/Freedomia_io/1" },
+  # { url = "https://t.me/reaper/1" },
 ]
 
 
