@@ -125,6 +125,8 @@ ALLOW_REENTER = false
 
 # When true (requires ALLOW_REENTER=true), closed positions stay in watchlist and
 # can be re-entered automatically when dip/flow conditions are favorable.
+# NOTE: Scalping controls re-entry/signal-retention behavior, NOT DCA. DCA is controlled
+# independently by ENABLE_DCA and DCA_* settings below.
 ENABLE_SCALPING = false
 
 # When true, auto-entries must pass dip/flow gates before buying.
@@ -132,12 +134,13 @@ ENABLE_SCALPING = false
 ENABLE_ENTRY_DIP = false
 
 
-# === Scalper / DCA Settings ===
-# Requires ENABLE_SCALPING = true.
+# === DCA (Dollar Cost Averaging) Settings ===
+# DCA is independent of scalping - it can fire on any open position regardless of ENABLE_SCALPING.
+# DCA triggers when a position is underwater by a threshold for a configured duration.
 
 # Enable DCA (Dollar Cost Averaging) behavior.
 # When false, all DCA functionality is disabled regardless of other DCA settings.
-ENABLE_DCA = true
+ENABLE_DCA = false
 
 # Minimum interest score required to enter a trade (derived from volume, flow, dip).
 # Higher values filter out lower-quality opportunities. Set to 0.0 to disable scoring filter.
@@ -165,7 +168,7 @@ DCA_DECAY = 0.7
 
 # Enable simple loss-timer DCA: when underwater by threshold for X seconds, trigger DCA.
 # When enabled, DCA is triggered if position stays below the threshold for the timer duration.
-DCA_ENABLE_LOSS_TIMER = true
+DCA_ENABLE_LOSS_TIMER = false
 DCA_LOSS_TIMER_SECONDS = 6
 DCA_LOSS_TRIGGER_UNDERWATER_PCT = 10.0
 
