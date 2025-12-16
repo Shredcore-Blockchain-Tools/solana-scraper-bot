@@ -16,7 +16,7 @@ NONCE_SCRIPT="setup_nonce.sh"
 BINARY_NAME="shredcore-scraper-bot"
 
 # GitHub repository URL for auto-updates (set this for public releases)
-REPO_URL="https://github.com/Shredcore-Blockchain-Tools/solana-scraper-bot.git"
+REPO_URL="https://github.com/shredcore/shredcore-scraper.git"
 
 # ============================================================================
 # Git Auto-Update System
@@ -529,7 +529,7 @@ configure_discord() {
             discord_sources="$discord_sources, $source_obj"
         fi
         
-        ((source_count++))
+        ((++source_count))
         echo "Added source #$source_count"
     done
     
