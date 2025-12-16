@@ -129,7 +129,7 @@ ENABLE_SCALPING = false
 
 # When true, auto-entries must pass dip/flow gates before buying.
 # When false, buy immediately once risk checks pass.
-ENABLE_ENTRY_DIP = true
+ENABLE_ENTRY_DIP = false
 
 
 # === Scalper / DCA Settings ===
